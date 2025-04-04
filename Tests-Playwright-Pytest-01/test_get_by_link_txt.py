@@ -33,5 +33,5 @@ with sync_playwright() as playwright: # This Is For Starting sync playwright Usi
     # This Will Close The Browser
     browser.close()
 
-    # Here AS We Use with-Keyword, Then close()-Method Will Call Automatically
-    # playwright.close()
+    # Here AS We Use with-Keyword, Then stop()-Method Will Call Automatically
+    # playwright.stop()
