@@ -1,7 +1,7 @@
 from playwright.sync_api import sync_playwright
 
 # Same as: playwright = sync_playwright().start()
-with sync_playwright() as playwright: # This Is For Starting sync playwrite Using with-context
+with sync_playwright() as playwright: # This Is For Starting sync playwright Using with-context
     
     # This Will Start Chromium Browser With Headless-Option AS False
     # And The Slow Mode Will Increase x1000
