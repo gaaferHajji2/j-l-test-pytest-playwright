@@ -13,17 +13,17 @@ with sync_playwright() as playwright: # This Is For Starting sync playwrite Usin
     # This Will Change The Browser URL
     page.goto("https://playwright.dev/python")
 
-    # This Will Return The Buttons With Text=Docs
-    docs_btn = page.get_by_role('link', name='Docs')
+    # This Will Return The Links With Text=Docs
+    docs_links = page.get_by_role('link', name='Docs')
 
     # This Will Highlight The Main Object
-    docs_btn.highlight()
+    docs_links.highlight()
 
     # The Page-Object.url Will Return The Current URL
     print("The Current URL Is: ", page.url)
 
     # This Will Fire The Click-Event
-    docs_btn.click()
+    docs_links.click()
 
     print("The Current URL Is: ", page.url)
 
