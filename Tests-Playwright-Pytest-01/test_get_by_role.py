@@ -37,6 +37,30 @@ with sync_playwright() as playwright:
     print("The Checkbox Is: ", checkbox)
     print("The Checkbox is_visible Is: ", checkbox.is_visible())
 
+    # This Will Throw An Exception If Multiple Elements
+    # Are Selected By The Role
+    # email_input = page.get_by_label("Email address")
+
+    # email_input.scroll_into_view_if_needed()
+
+    # email_input.highlight()
+
+    password_input = page.locator("#floatingPassword")
+
+    password_input.scroll_into_view_if_needed()
+
+    password_input.highlight()
+
+    email_input_by_placeholder = page.get_by_placeholder("name@example.com")
+
+    email_input_by_placeholder.scroll_into_view_if_needed()
+
+    email_input_by_placeholder.highlight()
+
+    # password_input_by_placeholder = page.get_by_placeholder("Password")
+
+    # password_input_by_placeholder.highlight()
+
     time.sleep(1)
 
     page.close()
