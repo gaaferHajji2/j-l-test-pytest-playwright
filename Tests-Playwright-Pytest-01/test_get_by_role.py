@@ -71,6 +71,14 @@ with sync_playwright() as playwright:
 
     middle_element.highlight()
 
+    text_element = page.get_by_text("attr", exact=True)
+
+    print("The element with exact is, display: ", text_element.is_visible())
+
+    text_element.scroll_into_view_if_needed()
+
+    text_element.highlight()
+
     # password_input_by_placeholder = page.get_by_placeholder("Password")
 
     # password_input_by_placeholder.highlight()
