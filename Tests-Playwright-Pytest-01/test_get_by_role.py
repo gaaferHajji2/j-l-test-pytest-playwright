@@ -59,6 +59,18 @@ with sync_playwright() as playwright:
 
     email_input_by_placeholder.highlight()
 
+    text_element = page.get_by_text("with faded secondary text")
+
+    text_element.scroll_into_view_if_needed()
+
+    text_element.highlight()
+
+    middle_element = page.get_by_text("Middle")
+
+    middle_element.scroll_into_view_if_needed()
+
+    middle_element.highlight()
+
     # password_input_by_placeholder = page.get_by_placeholder("Password")
 
     # password_input_by_placeholder.highlight()
