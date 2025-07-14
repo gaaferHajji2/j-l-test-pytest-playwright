@@ -34,6 +34,8 @@ with sync_playwright() as playwright:
 
     checkbox.scroll_into_view_if_needed()
 
+    # checkbox has method name: check()-method that check/uncheck the status of checkbox
+
     print("The Checkbox Is: ", checkbox)
     print("The Checkbox is_visible Is: ", checkbox.is_visible())
 
