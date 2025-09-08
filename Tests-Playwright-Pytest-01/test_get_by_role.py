@@ -31,9 +31,7 @@ with sync_playwright() as playwright:
     # This Will Throw An Exception If Multiple Elements
     # Are Selected By The Role
     # email_input = page.get_by_label("Email address")
-
     # email_input.scroll_into_view_if_needed()
-
     # email_input.highlight()
 
     password_input = page.locator("#floatingPassword")
@@ -64,5 +62,4 @@ with sync_playwright() as playwright:
     time.sleep(1)
 
     page.close()
-
     browser.close()
