@@ -8,6 +8,9 @@ with sync_playwright() as playwright:
     page.get_by_title("attribute").scroll_into_view_if_needed()
     page.get_by_title("attribute").highlight()
 
+    page.get_by_title("Source Title").first.scroll_into_view_if_needed()
+    page.get_by_title("Source Title").first.highlight()
+
     time.sleep(2)
     page.close()
     browser.close()
