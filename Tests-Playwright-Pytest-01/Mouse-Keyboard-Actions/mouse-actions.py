@@ -9,5 +9,14 @@ with sync_playwright() as playwright:
     xpath_locator = "//a[@id='themes']"
     t1 = page.locator(f"xpath={xpath_locator}")
     t1.click()
-    t1.dblclick()
+    # In milli-seconds
+    t1.dblclick(delay=1000)
+    t1.click()
+    # click the right button of mouse
+    # t1.click(button='right')
+
+    t2 = page.locator("css=button.btn.btn-outline-primary")
+    t2.scroll_into_view_if_needed()
+    t2.hover()
+
     time.sleep(2)
