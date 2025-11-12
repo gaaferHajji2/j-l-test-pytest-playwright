@@ -7,5 +7,6 @@ def test_orange_hrm_title(page: Page):
     password = page.get_by_placeholder("Password")
     password.fill("admin123")
     page.get_by_role("button", name="Login").click()
+    page.screenshot(path="test.png")
 
     assert page.url == "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index"
