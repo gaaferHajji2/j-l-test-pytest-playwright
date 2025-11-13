@@ -9,6 +9,4 @@ def test_orange_hrm_title(page: Page):
     password.fill("admin123")
     page.get_by_role("button", name="Login").click()
     page.wait_for_selector("css=canvas[height='265']", state='attached')
-    
-
     assert page.url == "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index"

@@ -17,6 +17,4 @@ def test_orange_hrm_title(browser: Browser):
     page.wait_for_selector("css=canvas[height='265']", state='attached')
     time.sleep(2)
     # page.screenshot(path="test.png", full_page=True)
-    
-
     assert page.url == "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index"
