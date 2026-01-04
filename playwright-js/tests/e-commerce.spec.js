@@ -14,10 +14,5 @@ test('check cart icon', async ({ page }) => {
     let t2 = page.locator('button[title="Add to Cart"]').nth(1)
     await expect(t2).toBeVisible()
     await t2.hover()
-    await t2.click({ delay: 2000 })
-    await t2.screenshot({ path: "./test.png"})
-
-    let t3 = page.locator('div.cart-icon').nth(0)
-    await t3.scrollIntoViewIfNeeded()
-    console.log(await t3.innerHTML())
+    await page.waitForTimeout(1000)
 })
